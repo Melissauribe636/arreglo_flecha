@@ -1,0 +1,35 @@
+const original = [1, 2, 3];
+const dobles = Array.from(original, (numero) => numero * 2);
+console.log(dobles); // Output: [2, 4, 6]
+
+const cadena = "Hola";
+const letras = Array.from(cadena, (letra) => letra);
+console.log(letras); // Output: ["H", "o", "l", "a"]
+
+const pares = Array.from({ length: 5 }, (_, index) => (index + 1) * 2);
+console.log(pares); // Output: [2, 4, 6, 8, 10]
+
+const original = [1, 2, 3];
+const duplicados = Array.from(original, (numero) => numero * 2);
+console.log(duplicados); // Output: [2, 4, 6]
+
+const cuadrados = Array.from({ length: 5 }, (_, index) => (index + 1) ** 2);
+console.log(cuadrados); // Output: [1, 4, 9, 16, 25]
+
+const numeros = Array.from({ length: 5 }, (_, index) => index + 1);
+console.log(numeros); // Output: [1, 2, 3, 4, 5]
+
+const numerosAleatorios = Array.from({ length: 5 }, () => Math.floor(Math.random() * 100) + 1);
+console.log(numerosAleatorios);
+
+const imparesCuadrados = Array.from({ length: 5 }, (_, index) => {
+    const numero = index * 2 + 1;
+    return numero * numero;
+  });
+  console.log(imparesCuadrados);
+
+  const propiedadesDinamicas = Array.from({ length: 3 }, (_, index) => ({
+    indice: index,
+    cuadrado: (index + 1) ** 2,
+  }));
+  console.log(propiedadesDinamicas);
